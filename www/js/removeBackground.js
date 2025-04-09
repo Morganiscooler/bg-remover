@@ -17,7 +17,7 @@ function removeBackground() {
 
     headers: {
 
-      "X-Api-Key": "EUxiqEScPmMNJy86Zn8EUa5o"
+      "X-Api-Key": "8UvDuz97hr15MGsPGKfkadNS"
 
       // "X-Api-Key": "8UvDuz97hr15MGsPGKfkadNS"
 
@@ -33,7 +33,9 @@ function removeBackground() {
 
     var url = URL.createObjectURL(blob);
 
-    var resultDiv = document.getElementById("result");
+    var resultDiv = document.getElementById("imagePreview");
+
+    resultDiv.innerHTML = "";
 
     var image = new Image();
 
@@ -54,6 +56,16 @@ function removeBackground() {
   var span = document.createElement("span");
 
   span.innerHTML = "Download <i class='fa fa-download'></i>";
+
+  
+  span.style.position = "absolute";
+
+  span.style.bottom = "90%";
+
+  span.style.left = "25%";
+
+  span.style.fontSize = "25px";
+
 
   link.appendChild(span);
 
